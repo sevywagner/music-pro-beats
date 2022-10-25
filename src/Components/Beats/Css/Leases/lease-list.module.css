@@ -1,0 +1,69 @@
+.lease-list {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 50vh;
+    background-color: white;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: enter .4s ease-out;
+}
+
+.items {
+    width: 90%;
+    height: 90%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.leases {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+@media only screen and (max-width: 1200px) {
+    .leases {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .lease-list {
+        height: 100%;
+        width: 60%;
+    }
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh);
+        z-index: -1;
+    }
+
+    70% {
+        opacity: .2;
+        transform: translateY(-50vh);
+        z-index: -1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+        z-index: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .lease-list {
+        width: 100%;
+    }
+}

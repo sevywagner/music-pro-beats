@@ -1,0 +1,7 @@
+.beat-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+

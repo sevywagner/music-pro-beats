@@ -1,0 +1,25 @@
+.cart {
+    white-space: nowrap;
+}
+
+.amount {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin-top: 7vh;
+    margin-right: 5vh;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .amount {
+        
+    }
+}

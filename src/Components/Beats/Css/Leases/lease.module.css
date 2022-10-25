@@ -1,0 +1,15 @@
+.lease {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 30vh;
+}
+
+.lease button {
+    margin-left: 6vh;
+}
+
+.description-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}

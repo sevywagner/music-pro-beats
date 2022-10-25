@@ -1,0 +1,98 @@
+.beat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.title {
+    width: 50vh;
+    font-weight: bold;
+    border-left: 3px rgb(162, 1, 1) solid;
+    border-right: 3px rgb(162, 0, 0) solid;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    text-align: center;
+}
+
+.genre {
+    font-style: italic;
+    width: 40vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-right: 3px rgb(162, 0, 0) solid;
+    text-align: center;
+}
+
+.melodic-key {
+    color: rgb(166, 0, 0);
+    font-weight: 600;
+    width: 30vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-right: 3px rgb(162, 0, 0) solid;
+    text-align: center;
+}
+
+.bpm {
+    width: 20vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-right: 3px rgb(162, 0, 0) solid;
+    text-align: center;
+}
+
+.actions {
+    width: 30vh;
+    height: 10vh;
+    border-right: 3px rgb(162, 0, 0) solid;
+    padding-left: 4vh;
+    padding-right: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+.actions button {
+    border: none;
+    white-space: nowrap;
+    padding: 15px;
+    border-radius: 35px;
+    background-color: black;
+    color: white;
+    margin-top: 2.5vh;
+    text-decoration: none;
+}
+
+.beat button:hover {
+    padding: 14px;
+    color: rgb(162, 0, 0);
+    border: 1px rgb(162, 0, 0) solid;
+}
+
+@media only screen and (max-width: 1200px) {
+    .melodic-key {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .bpm {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .title {
+        width: 30vh;
+    }
+
+    .genre {
+        width: 30vh;
+    }
+
+    .actions {
+        width: 30vh;
+    }
+}

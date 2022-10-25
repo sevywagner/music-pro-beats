@@ -1,0 +1,10 @@
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    border-bottom: 2px solid rgb(166, 0, 0);
+    margin-left: 4vh;
+    margin-right: 4vh;
+    font-size: 20px;
+}

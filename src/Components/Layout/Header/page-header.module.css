@@ -1,0 +1,124 @@
+.header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20vh;
+    overflow-y: hidden;
+}
+
+.title  {
+    margin-left: 6vh;
+    display: flex;
+    text-align: left;
+}
+
+button {
+    margin-right: 5vh;
+    margin-top: 5vh;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360);
+    }
+}
+
+.show-nav {
+    display: none;
+}
+
+.img {
+    width: 60%;
+    height: 8vh;
+    margin-top: 6vh;
+    margin-right: 5vh;
+    background-image: url('./../../../Pics/IMG_0385.PNG');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: spin infinite 20s linear;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+.nav a {
+    border-radius: 15px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    padding: 21px;
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo" "logo" "logo"
+        "title" "title" "title"
+        "nav" "nav" "nav"
+        "cart" "cart" "cart";
+        overflow-x: hidden;
+    }
+
+    .show-nav {
+        display: block;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: center;
+        grid-area: title;
+    }
+
+    .header {
+        flex-direction: column;
+        height: 50vh;
+    }
+
+    .nav {
+        margin-bottom: 0vh;
+        grid-area: nav;
+    }
+
+    .img {
+        background-position: center;
+        grid-area: logo;
+        margin-right: 0vh;
+        height: 10vh;
+        width: 100%;
+    }
+
+    .cart {
+        grid-area: cart;
+        display: flex;
+        justify-content: center;
+        margin-right: -10vh;
+    }
+}

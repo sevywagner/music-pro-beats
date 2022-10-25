@@ -1,0 +1,20 @@
+.pause-play-button {
+    border: none;
+    border-radius: 25px;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 5vh;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+.pause-play-button:hover {
+    padding: 19px;
+    padding-left: 99px;
+    padding-right: 99px;
+    border: 1px solid rgb(162, 0, 0);
+    background-color: white;
+    color: rgb(162, 0, 0);
+}
