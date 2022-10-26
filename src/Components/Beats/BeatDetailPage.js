@@ -27,16 +27,13 @@ const BeatDetailPage = (props) => {
 
     const sound = useRef(new Audio(file));
 
-    const playHandler = () => {
-        setIsPlaying(true);
-    }
-
-    const pauseHandler = () => {
-        setIsPlaying(false);
+    const togglePlayHandler = () => {
+        setIsPlaying((prevState) => !prevState);
     }
 
     useEffect(() => {
         dispatch(audioActions.setRef(sound));
+
     }, [dispatch]);
 
     useEffect(() => {
@@ -66,7 +63,7 @@ const BeatDetailPage = (props) => {
                     <div className={styles.beats}>
                         <button
                             className={styles['pause-play-button']}
-                            onClick={isPlaying ? pauseHandler : playHandler}
+                            onClick={togglePlayHandler}
                         >
                             {isPlaying ? 'Pause' : 'Play'}
                         </button>
