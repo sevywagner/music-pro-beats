@@ -2,7 +2,7 @@ import Button from "../UI/Button";
 import CartDisplay from "./CartDisplay";
 import styles from './Css/cart.module.css'
 import { useSelector, useDispatch } from "react-redux";
-import { cartActions } from "../../Store/cart-slice";
+import { cartActions } from "../../Store/Redux/cart-slice";
 
 const Cart = () => {
     const totalAmount = useSelector((state) => state.cart.totalAmount);

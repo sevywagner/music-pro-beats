@@ -2,7 +2,7 @@ import styles from './Css/beat-item.module.css';
 import { useNavigate } from 'react-router-dom';
 import Button from '../UI/Button';
 import { useDispatch } from 'react-redux';
-import { beatActions } from '../../Store/beat-slice';
+import { beatActions } from '../../Store/Redux/beat-slice';
 
 const BeatItem = (props) => {
     const navigate = useNavigate();
@@ -15,6 +15,7 @@ const BeatItem = (props) => {
             genre: props.genre,
             melodicKey: props.melodicKey,
             bpm: props.bpm,
+            url: props.url
         }
 
         dispatch(beatActions.setBeat(tempBeat));

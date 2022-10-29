@@ -1,7 +1,9 @@
 import styles from './Css/home.module.css';
-import { cartActions } from '../Store/cart-slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { cartActions } from '../Store/Redux/cart-slice';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+//import tag from './../Components/Beats/BeatFiles/tag.mp3';
+//import { beatActions } from '../Store/beat-slice';
 
 export const Backdrop = () => {
     return (
@@ -11,14 +13,10 @@ export const Backdrop = () => {
 
 const Home = () => {
     const dispatch = useDispatch();
-    const soundRef = useSelector((state) => state.audio.ref);
 
     useEffect(() => {
         dispatch(cartActions.setCheckPricing(false));
-        if (soundRef) {
-            soundRef.current.pause();
-        }
-    }, [dispatch, soundRef]);
+    }, [dispatch]);
 
     return (
         <div className={styles.home}>

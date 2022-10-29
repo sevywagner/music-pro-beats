@@ -1,7 +1,7 @@
 import Button from "../../UI/Button";
 import styles from './../Css/Leases/lease.module.css';
 import { useSelector, useDispatch } from "react-redux";
-import { cartActions } from "../../../Store/cart-slice";
+import { cartActions } from "../../../Store/Redux/cart-slice";
 
 const Lease = (props) => {
     const tempBeat = useSelector((state) => state.beat.tempBeat);

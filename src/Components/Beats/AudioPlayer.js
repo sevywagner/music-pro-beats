@@ -1,7 +1,7 @@
 import { Howl, Howler } from 'howler';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { audioActions } from '../../Store/audio-slice';
+import { audioActions } from '../../Store/Redux/audio-slice';
 import styles from './Css/audio-player.module.css';
 
 const AudioPlayer = (props) => {

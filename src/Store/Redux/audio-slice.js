@@ -3,11 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const audioSlice = createSlice({
     name: 'audio',
     initialState: {
-        ref: null
+        isPlaying: false,
+        audioUrl: 'MurdaSong'
     },
     reducers: {
-        setRef(state, action) {
-            state.ref = action.payload;
+        setIsPlaying(state, action) {
+            state.isPlaying = action.payload;
+        },
+        setAudioUrl(state, action) {
+            state.audioUrl = action.payload;
         }
     }
 });

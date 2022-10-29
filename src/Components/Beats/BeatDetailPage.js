@@ -1,9 +1,9 @@
 import Button from "../UI/Button";
 import styles from './Css/beat-detail.module.css';
 import { useNavigate, useParams } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
-import { cartActions } from "../../Store/cart-slice";
-import { audioActions } from "../../Store/audio-slice";
+import { useState, useEffect } from "react";
+import { cartActions } from "../../Store/Redux/cart-slice";
+import { audioActions } from "../../Store/Redux/audio-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from 'framer-motion';
 
@@ -18,31 +18,25 @@ const BeatDetailPage = (props) => {
     const beat = loadedBeats.find((beat) => beat.id === params.beatId);
 
     const backHandler = () => {
-        sound.current.pause();
         dispatch(cartActions.setCheckPricing(false));
-        navigate('/beats');
+        navigate('/beats', {replace: true});
     }
     
-    const file = require(`./BeatFiles/${beat.url}.wav`);
-
-    const sound = useRef(new Audio(file));
+    
 
     const togglePlayHandler = () => {
         setIsPlaying((prevState) => !prevState);
     }
 
     useEffect(() => {
-        dispatch(audioActions.setRef(sound));
+        dispatch(audioActions.setAudioUrl(beat.url));
 
-    }, [dispatch]);
-
-    useEffect(() => {
         if (isPlaying) {
-            sound.current.play();
+            dispatch(audioActions.setIsPlaying(true));
         } else {
-            sound.current.pause();
+            dispatch(audioActions.setIsPlaying(false));
         }
-    }, [isPlaying])
+    }, [isPlaying, beat.url, dispatch])
 
     const viewLeaseHandler = () => {
         dispatch(cartActions.setCheckPricing(!checkPricingState));

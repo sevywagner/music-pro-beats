@@ -3,7 +3,7 @@ import useHttp from "../../Hooks/use-http";
 import BeatItem from "./BeatItem";
 import styles from './Css/beat-list.module.css';
 import { useDispatch } from "react-redux";
-import { beatActions } from "../../Store/beat-slice";
+import { beatActions } from "../../Store/Redux/beat-slice";
 
 const BeatList = () => {
     const [loadedBeats, setLoadedBeats] = useState([]);
@@ -48,6 +48,7 @@ const BeatList = () => {
                 genre={beat.genre}
                 melodicKey={beat.melodicKey}
                 price={beat.price}
+                url={beat.url}
             />)}
         </div>
     );

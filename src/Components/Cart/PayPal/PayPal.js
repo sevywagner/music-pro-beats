@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { cartActions } from "../../../Store/cart-slice";
+import { cartActions } from "../../../Store/Redux/cart-slice";
 
 const PayPal = () => {
     const paypal = useRef();

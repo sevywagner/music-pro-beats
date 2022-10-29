@@ -4,7 +4,8 @@ const beatSlice = createSlice({
     name: 'beat',
     initialState: {
         tempBeat: {},
-        loadedBeats: []
+        loadedBeats: [],
+        hasPlayedTag: false
     },
     reducers: {
         setBeat(state, action) {
@@ -12,6 +13,9 @@ const beatSlice = createSlice({
         },
         setBeats(state, action) {
             state.loadedBeats = action.payload;
+        },
+        setHasPlayedTag(state, action) {
+            state.hasPlayedTag = action.payload;
         }
     }
 });

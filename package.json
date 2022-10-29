@@ -18,7 +18,6 @@
     "git": "^0.1.5",
     "googleapis": "^105.0.0",
     "howler": "^2.2.3",
-    "nodemailer": "^6.8.0",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

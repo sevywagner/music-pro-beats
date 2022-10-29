@@ -1,4 +1,4 @@
-import { cartActions } from '../Store/cart-slice';
+import { cartActions } from '../Store/Redux/cart-slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
