@@ -9,10 +9,16 @@ import PayPal from "./PayPal/PayPal";
 
 const Interface = (props) => {
     const cart = useSelector((state) => state.cart);
+    const beats = useSelector((state) => state.cart.beats);
     const [checkOut, setCheckOut] = useState(false);
 
     const checkOutHandler = () => {
-        setCheckOut(true);
+        if (beats.length > 0) {
+            setCheckOut(true);
+        } else {
+            alert('You must have items in the cart to check out');
+        }
+        
     }
     
 

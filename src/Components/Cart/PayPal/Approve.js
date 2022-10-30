@@ -8,7 +8,6 @@ import emailjs from '@emailjs/browser';
 
 const Approve = () => {
     const [beatList, setBeatList] = useState([]);
-    const [storedBeatNames, setStoreBeatNames] = useState([]);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const dispatch = useDispatch();
@@ -25,6 +24,7 @@ const Approve = () => {
         }, (error) => {
             console.log(error.text);
         });
+        dispatch(cartActions.resetCart());
     }
 
     useEffect(() => {
@@ -48,9 +48,9 @@ const Approve = () => {
             console.log(err);
         }
 
-        // eslint-disable-next-line
         
-    }, []);
+        // eslint-disable-next-line
+    }, [dispatch]);
 
     let linkString = '';
 
