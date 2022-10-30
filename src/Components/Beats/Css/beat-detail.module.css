@@ -89,6 +89,7 @@
 @media only screen and (max-width: 800px) {
     .right {
         margin-left: 0vh;
+        font-size: 25px;
     }
     .left {
         margin-left: -3vh;

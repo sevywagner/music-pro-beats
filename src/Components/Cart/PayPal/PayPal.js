@@ -10,33 +10,6 @@ const PayPal = () => {
     const totalPrice = useSelector((state) => state.cart.totalPrice);
     const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     window.paypal.Buttons({
-    //         createOrder: (data, actions, error) => {
-    //             return actions.order.create({
-    //                 intent: "CAPTURE",
-    //                 purchase_units: [
-    //                     {
-    //                         description: "Beats",
-    //                         amount: {
-    //                             currency_code: "USD",
-    //                             value: parseFloat(totalPrice + '.00')
-    //                         }
-    //                     }
-    //                 ]
-    //             });
-    //         },
-    //         onApprove: async (data, actions) => {
-    //             dispatch(cartActions.setHasPurchased(true));
-    //             navigate('/music-pro-beats/success');
-    //         },
-    //         onError: (error) => {
-    //             console.log(error);
-    //             navigate('/music-pro-beats/error');
-    //         }
-    //     }).render(paypal.current);
-    // }, [totalPrice, navigate, dispatch]);
-
     return (
         <div>
             <div ref={paypal}></div>

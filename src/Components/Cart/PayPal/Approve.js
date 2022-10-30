@@ -14,17 +14,23 @@ const Approve = () => {
     const formRef = useRef();
     const beatListRef = ref(storage, "Beats/");
     const cartItems = useSelector(state => state.cart.beats);
+    const hasPurchased = useSelector((state) => state.cart.hasPurchased);
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_kw159gn', 'template_hdtw3gh', formRef.current, 'btwNFPHJIznru2lf6')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        dispatch(cartActions.resetCart());
+        if (hasPurchased) {
+            emailjs.sendForm('service_kw159gn', 'template_hdtw3gh', formRef.current, 'btwNFPHJIznru2lf6')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            dispatch(cartActions.resetCart());
+        } else {
+            alert('Nice try.');
+        }
+        
     }
 
     useEffect(() => {
@@ -60,18 +66,20 @@ const Approve = () => {
 
     return (
         <div>
-            <form ref={formRef} onSubmit={sendEmail}>
-                <input type="text" name="name" value={name} onChange={(e) => {setName(e.target.value)}}/>
-                <input type="text" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}}/>
-                <textarea className={styles.invisible} type="text" value={beatList.map((beat) => `${beat} `)} name="download_link" onChange={() => {}}></textarea>
-                {/* <textarea className={styles.invisible} type="text" value={links} name="download_link" onChange={() => {}} /> */}
-
-                <button>Press</button>
-                
-            </form>
             <p className={styles.approve}>Your Order Was Approved Thank You!!</p>
-            {linkString}
-            
+            <div className={styles['form-wrap']}>
+                <form ref={formRef} onSubmit={sendEmail}>
+                    <label>Name</label>
+                    <input type="text" name="name" value={name} onChange={(e) => {setName(e.target.value)}}/>
+
+                    <label>Email</label>
+                    <input type="text" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}}/>
+                    
+
+                    <textarea className={styles.invisible} type="text" value={beatList.map((beat) => `${beat} `)} name="download_link" onChange={() => {}}></textarea>
+                    <button>Email Beats</button>
+                </form>
+            </div>
         </div>
     );
 }

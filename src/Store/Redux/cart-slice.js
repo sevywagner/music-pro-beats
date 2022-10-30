@@ -39,6 +39,7 @@ const cartSlice = createSlice({
             state.beats = [];
             state.totalAmount = 0;
             state.totalPrice = 0;
+            state.hasPurchased = false;
         }
     }
 });
