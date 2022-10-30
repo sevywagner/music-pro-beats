@@ -41,7 +41,7 @@ const PayPal = () => {
         <div>
             <div ref={paypal}></div>
             <PayPalScriptProvider options={{
-                "client-id": "AdCBUAJMi9VBcf2l7Tlcu3BAqpip2TPKrIGC9dpp0FhFfTLFYeOxmbwDu08X0CZeosxvPklU26ld4E0B"
+                "client-id": "AWPDTKeiDm3N6EwlXJ_5UJWIgiEU0JWYYK51HioCy30ojRp-evBzxfRuDmBLewS0BpcgvnK_CW0EqgdB"
             }}>
                 <PayPalButtons 
                     createOrder={(data, actions) => {
