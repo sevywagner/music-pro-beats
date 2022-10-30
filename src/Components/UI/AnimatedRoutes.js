@@ -14,7 +14,7 @@ const AnimatedRoutes = () => {
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<Navigate to="/music-pro-beats/home" />} />
-                <Route path='/music-pro-beats' element={<Navigate to="/home" />} />
+                <Route path='/music-pro-beats' element={<Navigate to="/music-pro-beats/home" />} />
                 <Route path='/music-pro-beats/home' element={<Home />} />
                 <Route path='/music-pro-beats/beats' element={<Beat />} />
                 <Route path='/music-pro-beats/beats/:beatId' element={<BeatDetailPage />} />
