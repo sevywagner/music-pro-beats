@@ -12,9 +12,9 @@ const PageHeader = (props) => {
                     <h1>Music Pro Beats</h1>
                 </div>
                 <div className={styles.nav}>
-                    <NavLink to="/home">Home</NavLink>
-                    <NavLink to="/beats">Beats</NavLink>
-                    <NavLink to="/services">Services</NavLink>
+                    <NavLink to="/music-pro-beats/home">Home</NavLink>
+                    <NavLink to="/music-pro-beats/beats">Beats</NavLink>
+                    <NavLink to="/music-pro-beats/services">Services</NavLink>
                 </div>
                 <div className={styles.cart}>
                     <Cart />

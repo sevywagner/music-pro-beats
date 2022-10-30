@@ -19,7 +19,7 @@ const BeatDetailPage = (props) => {
 
     const backHandler = () => {
         dispatch(cartActions.setCheckPricing(false));
-        navigate('/beats', {replace: true});
+        navigate('/music-pro-beats/beats', {replace: true});
     }
     
     

@@ -12,15 +12,15 @@ const AnimatedRoutes = () => {
 
     return (
         <AnimatePresence>
-            <Routes basename='/music-pro-beats' location={location} key={location.pathname}>
-                <Route path='/' element={<Navigate to="/home" />} />
+            <Routes location={location} key={location.pathname}>
+                <Route path='/' element={<Navigate to="/music-pro-beats/home" />} />
                 <Route path='/music-pro-beats' element={<Navigate to="/home" />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/beats' element={<Beat />} />
-                <Route path='/beats/:beatId' element={<BeatDetailPage />} />
-                <Route path='/services' element={<Services />} />
-                <Route path='/success' element={<Approve />} />
-                <Route path='/error' element={<Error />} />
+                <Route path='/music-pro-beats/home' element={<Home />} />
+                <Route path='/music-pro-beats/beats' element={<Beat />} />
+                <Route path='/music-pro-beats/beats/:beatId' element={<BeatDetailPage />} />
+                <Route path='/music-pro-beats/services' element={<Services />} />
+                <Route path='/music-pro-beats/success' element={<Approve />} />
+                <Route path='/music-pro-beats/error' element={<Error />} />
             </Routes>
         </AnimatePresence>
         

@@ -27,11 +27,11 @@ const PayPal = () => {
             },
             onApprove: async (data, actions) => {
                 dispatch(cartActions.setHasPurchased(true));
-                navigate('/success');
+                navigate('/music-pro-beats/success');
             },
             onError: (error) => {
                 console.log(error);
-                navigate('/error');
+                navigate('/music-pro-beats/error');
             }
         }).render(paypal.current);
     }, [totalPrice, navigate, dispatch]);

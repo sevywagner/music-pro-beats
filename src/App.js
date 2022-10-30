@@ -30,10 +30,10 @@ function App() {
           dispatch(audioActions.setIsPlaying(false));
         }
 
-        if (location.pathname === '/home' || 
-            location.pathname === '/beats' || 
-            location.pathname === '/services' ||
-            location.pathname === '/success'
+        if (location.pathname === '/music-pro-beats/home' || 
+            location.pathname === '/music-pro-beats/beats' || 
+            location.pathname === '/music-pro-beats/services' ||
+            location.pathname === '/music-pro-beats/success'
           ) {
           await sound.current.pause();
           dispatch(audioActions.setIsPlaying(false));

@@ -19,7 +19,7 @@ const BeatItem = (props) => {
         }
 
         dispatch(beatActions.setBeat(tempBeat));
-        navigate(`/beats/${props.id}`);
+        navigate(`/music-pro-beats/beats/${props.id}`);
     }
 
     return (
