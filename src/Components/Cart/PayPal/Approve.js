@@ -35,7 +35,12 @@ const Approve = () => {
             listAll(beatListRef).then((response) => {
                 response.items.forEach((item) => {
                     getDownloadURL(item).then((url) => {
-                        setBeatList((prevState => [...prevState, url]));
+                        cartItems.forEach((beat) => {
+                            if (url.includes(beat.url)) {
+                                console.log(url);
+                                setBeatList((prevState => [...prevState, url]));
+                            }
+                        })
                     });
                 });
             });
@@ -43,35 +48,29 @@ const Approve = () => {
             console.log(err);
         }
 
-
-        listAll(beatListRef).then((response) => {
-            response.items.forEach((item) => setStoreBeatNames((prevState) => [...prevState]));
-        });
-
-        for (let i; i < beatList.length; i++) {
-            for (let j; j < cartItems.length; j++) {
-                if (beatList[i].includes(cartItems[j].url)) {
-                    emailLinks.push(beatList[i]);
-                    console.log(beatList[i]);
-                }
-            }
-        }
-
         // eslint-disable-next-line
+        
     }, []);
 
-    const emailLinks = [...storedBeatNames]; //just for the sake of a no warning console
+    let linkString = '';
+
+    beatList.forEach((link) => {
+        linkString.concat(link + ' ');
+    })
 
     return (
         <div>
             <form ref={formRef} onSubmit={sendEmail}>
                 <input type="text" name="name" value={name} onChange={(e) => {setName(e.target.value)}}/>
                 <input type="text" name="email" value={email} onChange={(e) => {setEmail(e.target.value)}}/>
-                {/* <textarea className={styles.invisible} type="text" name="download_link" onChange={() => {}}>{emailLinks.map((link) => `${link}`)}</textarea> */}
+                <textarea className={styles.invisible} type="text" value={beatList.map((beat) => `${beat} `)} name="download_link" onChange={() => {}}></textarea>
                 {/* <textarea className={styles.invisible} type="text" value={links} name="download_link" onChange={() => {}} /> */}
+
                 <button>Press</button>
+                
             </form>
             <p className={styles.approve}>Your Order Was Approved Thank You!!</p>
+            {linkString}
             
         </div>
     );

@@ -16,6 +16,7 @@ const BeatDetailPage = (props) => {
     const params = useParams();
     const loadedBeats = useSelector((state) => state.beat.loadedBeats);
     const beat = loadedBeats.find((beat) => beat.id === params.beatId);
+    
 
     const backHandler = () => {
         dispatch(cartActions.setCheckPricing(false));
@@ -36,7 +37,7 @@ const BeatDetailPage = (props) => {
         } else {
             dispatch(audioActions.setIsPlaying(false));
         }
-    }, [isPlaying, beat.url, dispatch])
+    }, [isPlaying, beat, dispatch])
 
     const viewLeaseHandler = () => {
         dispatch(cartActions.setCheckPricing(!checkPricingState));
