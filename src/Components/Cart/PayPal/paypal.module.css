@@ -60,6 +60,13 @@ form button:hover {
     border: rgb(95, 0, 86) 2px solid;
 }
 
+textarea {
+    width: 90%;
+    height: 30vh;
+    border-radius: 20px;
+    border: black 2px solid;
+}
+
 @media only screen and (max-width: 700px) {
     form {
         width: 100%;

@@ -38,3 +38,13 @@
         border-bottom: 1px solid black;
     }
 }
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.sent {
+    color: white;
+    font-size: 25px;
+}
