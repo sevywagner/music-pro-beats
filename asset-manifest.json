@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/music-pro-beats/static/css/main.1349d15e.css",
-    "main.js": "/music-pro-beats/static/js/main.e1533be2.js",
+    "main.css": "/music-pro-beats/static/css/main.7b63ca02.css",
+    "main.js": "/music-pro-beats/static/js/main.a21774a6.js",
     "static/media/Rula.wav": "/music-pro-beats/static/media/Rula.7e916cf89fa97f25afe5.wav",
     "static/media/Infamous.wav": "/music-pro-beats/static/media/Infamous.8f6e4dc9b906e4448b00.wav",
     "static/media/Reaper.wav": "/music-pro-beats/static/media/Reaper.08494b1102f5cc1952c6.wav",
@@ -13,11 +13,11 @@
     "static/media/Backdrop.JPG": "/music-pro-beats/static/media/Backdrop.02378e69dd5ad500695b.JPG",
     "static/media/IMG_0385.PNG": "/music-pro-beats/static/media/IMG_0385.35a202b419908ddc240c.PNG",
     "index.html": "/music-pro-beats/index.html",
-    "main.1349d15e.css.map": "/music-pro-beats/static/css/main.1349d15e.css.map",
-    "main.e1533be2.js.map": "/music-pro-beats/static/js/main.e1533be2.js.map"
+    "main.7b63ca02.css.map": "/music-pro-beats/static/css/main.7b63ca02.css.map",
+    "main.a21774a6.js.map": "/music-pro-beats/static/js/main.a21774a6.js.map"
   },
   "entrypoints": [
-    "static/css/main.1349d15e.css",
-    "static/js/main.e1533be2.js"
+    "static/css/main.7b63ca02.css",
+    "static/js/main.a21774a6.js"
   ]
 }
