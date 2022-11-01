@@ -63,6 +63,8 @@ function App() {
 
     playPause();
 
+    
+
   }, [audio, location, sound, dispatch])
 
   return (

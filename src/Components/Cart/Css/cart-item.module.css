@@ -25,3 +25,14 @@
     border: 1px solid rgb(122, 0, 0);
     color: rgb(185, 0, 0);
 }
+
+@media only screen and (max-width: 600px) {
+    .cart-item  {
+        font-size: 15px;
+    }
+
+    .button button {
+        margin-top: 1vh;
+        margin-right: -1vh;
+    }
+}

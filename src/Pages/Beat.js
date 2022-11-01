@@ -2,9 +2,17 @@ import BeatList from "../Components/Beats/BeatList";
 import Card from "../Components/UI/Card";
 import styles from './Css/beat.module.css';
 import { motion } from 'framer-motion';
-import { Outlet } from "react-router";
+import { cartActions } from "../Store/Redux/cart-slice";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 const Beat = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(cartActions.setCheckPricing(false));
+    }, [dispatch])
+
     return (
         <motion.div
             initial={{transform: "translateX(-100vh)"}}
@@ -15,7 +23,6 @@ const Beat = () => {
             <Card className={styles.list}>
                 <BeatList />
             </Card>
-            <Outlet />
         </motion.div>
     );
 }
