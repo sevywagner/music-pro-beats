@@ -76,3 +76,7 @@ select {
         overflow-x: hidden;
     }
 }
+
+.invalid {
+    background-color: rgba(255, 0, 0, 0.418);
+}
