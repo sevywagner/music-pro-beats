@@ -23,6 +23,7 @@ const Services = () => {
             initial={{transform: "translateX(150vh)"}}
             animate={{transform: "translateX(0vh)"}}
             exit={{}}
+            className={styles.wrapper}
         >
             <p className={styles.title}>Services</p>
 

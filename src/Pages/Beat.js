@@ -18,6 +18,7 @@ const Beat = () => {
             initial={{transform: "translateX(-100vh)"}}
             animate={{transform: "translateX(0vh)"}}
             exit={{}}
+            className={styles.wrapper}
         >
             <p className={styles.title}>Beats</p>
             <Card className={styles.list}>
