@@ -8,3 +8,20 @@
     margin-right: 4vh;
     font-size: 20px;
 }
+
+.button button {
+    background-color: white;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 3vh;
+    font-size: 20px;
+}
+
+.button button:hover {
+    background-color: black;
+    border: 1px solid rgb(122, 0, 0);
+    color: rgb(185, 0, 0);
+}

@@ -24,7 +24,12 @@ const cartSlice = createSlice({
         },
         removeBeat(state, action) {
             const id = action.payload;
+            const beat = state.beats.find((beat) => beat.id === id);
             state.beats = state.beats.filter((beat) => beat.id !== id);
+
+            state.totalPrice -= beat.price;
+            state.totalAmount--;
+
         },
         setCheckPricing(state, action) {
             state.checkPricing = action.payload;

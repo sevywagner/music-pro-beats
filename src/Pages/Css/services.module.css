@@ -48,3 +48,20 @@
     color: white;
     font-size: 25px;
 }
+
+select {
+    text-align: center;
+    padding: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+
+.form-title {
+    font-size: 25px;
+    color: rgba(128, 0, 128, 0.542);
+}
+
+.form-error {
+    font-size: 25px;
+    color: red;
+}

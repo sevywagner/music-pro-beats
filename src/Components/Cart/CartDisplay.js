@@ -18,7 +18,6 @@ const Interface = (props) => {
         } else {
             alert('You must have items in the cart to check out');
         }
-        
     }
     
 
@@ -33,7 +32,7 @@ const Interface = (props) => {
                         {cart.totalAmount === 0 && 
                             <p className={styles.empty}>No items yet. If you add one you will see it here.</p>
                         }
-                        {cart.beats.map(beat => <CartItem key={beat.id} title={beat.title} lease={beat.lease} price={beat.price}/>)}
+                        {cart.beats.map(beat => <CartItem key={beat.id} id={beat.id} title={beat.title} lease={beat.lease} price={beat.price}/>)}
                     </div>
                     <div className={styles.total}>
                         <h2>Total: </h2>
