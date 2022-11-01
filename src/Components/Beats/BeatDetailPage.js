@@ -16,16 +16,11 @@ const BeatDetailPage = (props) => {
     const params = useParams();
     const loadedBeats = useSelector((state) => state.beat.loadedBeats);
     const beat = loadedBeats.find((beat) => beat.id === params.beatId);
-    if (!beat) {
-        navigate('/music-pro-beats/home', {replace: true});
-    }
 
     const backHandler = () => {
         dispatch(cartActions.setCheckPricing(false));
         navigate('/music-pro-beats/beats', {replace: true});
     }
-    
-    
 
     const togglePlayHandler = () => {
         setIsPlaying((prevState) => !prevState);
