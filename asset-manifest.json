@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/music-pro-beats/static/css/main.7cb00cd1.css",
-    "main.js": "/music-pro-beats/static/js/main.97aa6896.js",
+    "main.css": "/music-pro-beats/static/css/main.45f692b9.css",
+    "main.js": "/music-pro-beats/static/js/main.5d460f2a.js",
     "static/media/AboveAllElse.wav": "/music-pro-beats/static/media/AboveAllElse.9b0bc025d36809d0bc96.wav",
     "static/media/TomorrowNight.wav": "/music-pro-beats/static/media/TomorrowNight.e1d9a459eecd8cbd4cda.wav",
     "static/media/Rula.wav": "/music-pro-beats/static/media/Rula.7e916cf89fa97f25afe5.wav",
@@ -15,11 +15,11 @@
     "static/media/Backdrop.JPG": "/music-pro-beats/static/media/Backdrop.02378e69dd5ad500695b.JPG",
     "static/media/IMG_0385.PNG": "/music-pro-beats/static/media/IMG_0385.35a202b419908ddc240c.PNG",
     "index.html": "/music-pro-beats/index.html",
-    "main.7cb00cd1.css.map": "/music-pro-beats/static/css/main.7cb00cd1.css.map",
-    "main.97aa6896.js.map": "/music-pro-beats/static/js/main.97aa6896.js.map"
+    "main.45f692b9.css.map": "/music-pro-beats/static/css/main.45f692b9.css.map",
+    "main.5d460f2a.js.map": "/music-pro-beats/static/js/main.5d460f2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7cb00cd1.css",
-    "static/js/main.97aa6896.js"
+    "static/css/main.45f692b9.css",
+    "static/js/main.5d460f2a.js"
   ]
 }
