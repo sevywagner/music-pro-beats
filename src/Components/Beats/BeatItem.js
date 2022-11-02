@@ -8,7 +8,7 @@ const BeatItem = (props) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const peepHandler /* lol */ = () => {
+    const checkHandler = () => {
         const tempBeat = {
             id: props.id,
             title: props.title,
@@ -37,7 +37,7 @@ const BeatItem = (props) => {
                     <p>{props.bpm}</p>
                 </div>
                 <div className={styles.actions}>
-                    <Button onClick={peepHandler}>Peep it</Button>
+                    <Button onClick={checkHandler}>Check it Out</Button>
                 </div>
             </div>
     );
