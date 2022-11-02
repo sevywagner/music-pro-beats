@@ -10,7 +10,7 @@ import Services from "../../Pages/Services";
 const AnimatedRoutes = () => {
     const location = useLocation();
 
-    return (
+    return ( 
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<Navigate to="/music-pro-beats/home" />} />

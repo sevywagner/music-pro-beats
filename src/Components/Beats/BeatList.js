@@ -9,7 +9,6 @@ const BeatList = () => {
     const [loadedBeats, setLoadedBeats] = useState([]);
     const { isLoading, error, sendRequest: fetchBeats } = useHttp();
     const dispatch = useDispatch();
-    
 
     const loadBeats = useCallback((beats) => {
         const myBeats = [];

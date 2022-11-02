@@ -26,7 +26,8 @@ input {
 
 .form-wrap {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 form {
@@ -66,6 +67,20 @@ textarea {
     height: 30vh;
     border-radius: 20px;
     border: black 2px solid;
+}
+
+.invalid {
+    background-color: rgba(255, 0, 0, 0.412);
+}
+
+.sent {
+    color: white;
+    font-size: 25px;
+}
+
+.form-error {
+    font-size: 25px;
+    color: red;
 }
 
 @media only screen and (max-width: 700px) {
