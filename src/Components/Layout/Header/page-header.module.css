@@ -84,7 +84,7 @@ button {
     .mobile-header-active {
         display: grid;
         background-color: black;
-        height: 60vh;
+        height: 65vh;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
@@ -94,6 +94,7 @@ button {
         "cart" "cart" "cart"
         "button" "button" "button";
         overflow-x: hidden;
+        overflow-y: hidden;
         width: 100%;
     }
 
@@ -147,7 +148,7 @@ button {
         grid-area: cart;
         display: flex;
         justify-content: center;
-        margin-right: -10vh;
+        margin-right: -8.4vh;
     }
 
     .dropdown-button {
