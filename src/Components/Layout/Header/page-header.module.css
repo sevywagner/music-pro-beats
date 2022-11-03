@@ -12,6 +12,12 @@
     overflow-y: hidden;
 }
 
+
+
+.mobile-header {
+    display: none;
+}
+
 .title  {
     margin-left: 6vh;
     display: flex;
@@ -75,16 +81,29 @@ button {
 }
 
 @media only screen and (max-width: 800px) {
-    .header {
+    .mobile-header-active {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        background-color: black;
+        height: 60vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
         "logo" "logo" "logo"
         "title" "title" "title"
         "nav" "nav" "nav"
-        "cart" "cart" "cart";
+        "cart" "cart" "cart"
+        "button" "button" "button";
         overflow-x: hidden;
+        width: 100%;
+    }
+
+    .mobile-header {
+        display: block;
+        background-color: black;
+    }
+
+    .header{
+        display: none;
     }
 
     .show-nav {
@@ -110,9 +129,16 @@ button {
     .img {
         background-position: center;
         grid-area: logo;
-        margin-right: 0vh;
         height: 10vh;
         width: 100%;
+    }
+
+    .mobile-header .img {
+        margin-left: 1vh;
+    }
+
+    .mobile-header-active .img {
+        margin-right: 1.5vh;
     }
 
     .cart {
@@ -120,5 +146,40 @@ button {
         display: flex;
         justify-content: center;
         margin-right: -10vh;
+    }
+
+    .dropdown-button {
+        grid-area: button;
+        margin-bottom: 3vh;
+    }
+
+    .mobile-header-active .dropdown-button {
+        margin-left: 3vh;
+        animation: fade-in .2s ease-in;
+    }
+    
+    .dropdown-button button {
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        height: 50px;
+        border: none;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 15px;
+        white-space: nowrap;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateX(-100vh);
+        opacity: .5;
+    }
+
+    100% {
+        transform: translateX(0vh);
+        opacity: 1;
     }
 }
