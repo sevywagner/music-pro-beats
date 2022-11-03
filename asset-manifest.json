@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/music-pro-beats/static/css/main.d492ca1a.css",
+    "main.css": "/music-pro-beats/static/css/main.53545254.css",
     "main.js": "/music-pro-beats/static/js/main.0247a63a.js",
     "static/media/AboveAllElse.wav": "/music-pro-beats/static/media/AboveAllElse.9b0bc025d36809d0bc96.wav",
     "static/media/TomorrowNight.wav": "/music-pro-beats/static/media/TomorrowNight.e1d9a459eecd8cbd4cda.wav",
@@ -15,11 +15,11 @@
     "static/media/Backdrop.JPG": "/music-pro-beats/static/media/Backdrop.02378e69dd5ad500695b.JPG",
     "static/media/IMG_0385.PNG": "/music-pro-beats/static/media/IMG_0385.35a202b419908ddc240c.PNG",
     "index.html": "/music-pro-beats/index.html",
-    "main.d492ca1a.css.map": "/music-pro-beats/static/css/main.d492ca1a.css.map",
+    "main.53545254.css.map": "/music-pro-beats/static/css/main.53545254.css.map",
     "main.0247a63a.js.map": "/music-pro-beats/static/js/main.0247a63a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d492ca1a.css",
+    "static/css/main.53545254.css",
     "static/js/main.0247a63a.js"
   ]
 }
