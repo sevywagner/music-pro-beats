@@ -39,7 +39,7 @@ const BeatList = () => {
         <div className={styles['beat-list']}>
             {isLoading && <p>Loading...</p>}
             {error && <p>Error</p>}
-            {loadedBeats.map((beat) => <BeatItem 
+            {loadedBeats && loadedBeats.map((beat) => <BeatItem 
                 key={beat.id}
                 id={beat.id}
                 title={beat.title}

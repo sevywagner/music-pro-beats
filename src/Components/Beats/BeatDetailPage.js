@@ -1,6 +1,6 @@
 import Button from "../UI/Button";
 import styles from './Css/beat-detail.module.css';
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { cartActions } from "../../Store/Redux/cart-slice";
 import { audioActions } from "../../Store/Redux/audio-slice";
@@ -27,7 +27,9 @@ const BeatDetailPage = (props) => {
     }
 
     useEffect(() => {
-        dispatch(audioActions.setAudioUrl(beat.url));
+        if (beat) {
+            dispatch(audioActions.setAudioUrl(beat.url));
+        }
 
         if (isPlaying) {
             dispatch(audioActions.setIsPlaying(true));
@@ -46,7 +48,7 @@ const BeatDetailPage = (props) => {
             animate={{opacity: 1}}
             exit={{display: "none"}}
         >
-            <div className={styles['beat-page']}>
+            {beat ? <div className={styles['beat-page']}>
 
                 <div className={styles.left}>
                     <div className={styles.title}>
@@ -71,8 +73,9 @@ const BeatDetailPage = (props) => {
                     <p>{beat.melodicKey}</p>
                     <p>{beat.bpm} BPM</p>
                 </div>
-                
-            </div>
+
+                </div> : <Navigate to='/music-pro-beats/home' />}
+            
         </motion.div>
     );
 }
