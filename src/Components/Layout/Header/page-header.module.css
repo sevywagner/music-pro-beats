@@ -98,8 +98,10 @@ button {
     }
 
     .mobile-header {
-        display: block;
+        display: inline-block;
+        width: 100%;
         background-color: black;
+        height: 100%;
     }
 
     .header{

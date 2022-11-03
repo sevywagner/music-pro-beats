@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     background-position: center;
+    background-color: rgb(255, 255, 255);
 }
 
 .home p {
@@ -37,6 +38,11 @@
 
 @media only screen and (max-width: 800px) {
     .home p {
-        bottom: 15vh
+        bottom: 12vh
+    }
+
+    .home p {
+        background-color: rgba(127, 0, 136, 0.274);
+        border-radius: 20px;
     }
 }
