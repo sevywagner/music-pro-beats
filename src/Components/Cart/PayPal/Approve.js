@@ -99,10 +99,12 @@ const Approve = () => {
             <p className={styles.approve}>Your Order Was Approved Thank You!!</p>
             <div className={styles['form-wrap']}>
                 {!formisValid && <p className={styles['form-error']}>Form is invalid. Please make sure you've filled out all fields.</p>}
-                {hasSent && <p className={styles.sent}>Your beats have been sent to your email.</p>}
+                {hasSent && <p className={styles.sent}>Your beats have been sent to your email. Make sure to check your junk if it is not in your primary</p>}
                 {error && <p className={styles['form-error']}>An error occured while sending your form, please try again.</p>}
 
                 <form ref={formRef} onSubmit={sendEmail}>
+                    <p className={styles['form-title']}>Please enter your information below so I can send you your beats.</p>
+
                     <label>Name</label>
                     <input 
                         type="text" 

@@ -83,6 +83,11 @@ textarea {
     color: red;
 }
 
+.form-title {
+    color: rgb(111, 0, 129);
+    font-size: 25px;
+}
+
 @media only screen and (max-width: 700px) {
     form {
         width: 100%;
