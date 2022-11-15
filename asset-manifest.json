@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/music-pro-beats/static/css/main.f99c5715.css",
-    "main.js": "/music-pro-beats/static/js/main.a0583068.js",
+    "main.css": "/music-pro-beats/static/css/main.2079c7eb.css",
+    "main.js": "/music-pro-beats/static/js/main.525679f6.js",
     "static/media/AboveAllElse.wav": "/music-pro-beats/static/media/AboveAllElse.9b0bc025d36809d0bc96.wav",
     "static/media/TomorrowNight.wav": "/music-pro-beats/static/media/TomorrowNight.e1d9a459eecd8cbd4cda.wav",
     "static/media/Rula.wav": "/music-pro-beats/static/media/Rula.7e916cf89fa97f25afe5.wav",
     "static/media/Infamous.wav": "/music-pro-beats/static/media/Infamous.8f6e4dc9b906e4448b00.wav",
+    "static/media/Foreign.wav": "/music-pro-beats/static/media/Foreign.49e48fca8dda859962ff.wav",
+    "static/media/TrueIntentions.wav": "/music-pro-beats/static/media/TrueIntentions.05a30394578baf71ddc5.wav",
     "static/media/Reaper.wav": "/music-pro-beats/static/media/Reaper.08494b1102f5cc1952c6.wav",
     "static/media/TrueIntentions2.wav": "/music-pro-beats/static/media/TrueIntentions2.76faa0d5fc5b65c6a1c1.wav",
+    "static/media/SoundEffectsFromTheSoul.wav": "/music-pro-beats/static/media/SoundEffectsFromTheSoul.bfdf657e008973a79029.wav",
     "static/media/JuegosMente.wav": "/music-pro-beats/static/media/JuegosMente.86f7202f294ab1fcd367.wav",
     "static/media/Class.wav": "/music-pro-beats/static/media/Class.9e237571092a3dc97667.wav",
     "static/media/MurdaSong.wav": "/music-pro-beats/static/media/MurdaSong.cc2b84f6d71bdce5d5de.wav",
@@ -15,11 +18,11 @@
     "static/media/Backdrop.JPG": "/music-pro-beats/static/media/Backdrop.02378e69dd5ad500695b.JPG",
     "static/media/IMG_0385.PNG": "/music-pro-beats/static/media/IMG_0385.35a202b419908ddc240c.PNG",
     "index.html": "/music-pro-beats/index.html",
-    "main.f99c5715.css.map": "/music-pro-beats/static/css/main.f99c5715.css.map",
-    "main.a0583068.js.map": "/music-pro-beats/static/js/main.a0583068.js.map"
+    "main.2079c7eb.css.map": "/music-pro-beats/static/css/main.2079c7eb.css.map",
+    "main.525679f6.js.map": "/music-pro-beats/static/js/main.525679f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.f99c5715.css",
-    "static/js/main.a0583068.js"
+    "static/css/main.2079c7eb.css",
+    "static/js/main.525679f6.js"
   ]
 }
