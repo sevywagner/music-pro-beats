@@ -85,15 +85,17 @@
 
 @media only screen and (max-width: 800px) {
     .title {
-        width: 40vh;
-        margin-left: 4vh;
+        
+        margin-left: 5vh;
     }
 
     .genre {
-        width: 32vh;
+        width: 30vh;
     }
 
     .actions {
-        width: 25vh;
+        width: 20vh;
+        margin-left: 0vh;
+        margin-right: 0vh;
     }
 }

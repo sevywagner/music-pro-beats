@@ -7,34 +7,12 @@ import AnimatedRoutes from './Components/UI/AnimatedRoutes';
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router';
 import { audioActions } from './Store/Redux/audio-slice';
-import useHttp from './Hooks/use-http';
 
 function App() {
   const checkPricing = useSelector((state) => state.cart.checkPricing);
   const audio = useSelector((state) => state.audio);
   const location = useLocation();
   const dispatch = useDispatch();
-  const { isLoading, error, sendRequest } = useHttp();
-
-  // const sendBeats = () => {
-  //   sendRequest({
-  //     url: 'https://music-pro-beats-default-rtdb.firebaseio.com/beats.json',
-  //     method: 'POST',
-  //     body: {
-  //       id: 'b10',
-  //       bpm: '140',
-  //       genre: 'RnB/Drill',
-  //       melodicKey: 'Gm',
-  //       price: '100',
-  //       title: 'Tomorrow Night',
-  //       url: 'TomorrowNight'
-  //     },
-  //     headers: {
-  //       "Content-Type": "Application/js"
-  //     }
-  //   }, () => {});
-  // }
-  
 
   const sound = useRef(new Audio());
   useEffect(() => {
@@ -81,7 +59,6 @@ function App() {
       <div className='list'>
         {checkPricing && <LeaseList />}
       </div>
-      {/* <button onClick={sendBeats}>Send</button> */}
     </div>
   );
 }
