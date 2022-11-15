@@ -2,12 +2,21 @@
     text-align: center;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .beat-page {
     display: flex;
     flex-direction: row;
     background-color: white;
-    width: 100%;
+    width: 70%;
     justify-content: center;
+    border-radius: 20px;
+    margin-top: 5vh;
+    box-shadow: 10px 10px 25px 10px black;
+    margin-bottom: 5vh;
 }
 
 .left {
@@ -93,5 +102,15 @@
     }
     .left {
         margin-left: -3vh;
+    }
+    .title {
+        margin-left: 0vh;
+    }
+
+    .beat-page {
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 0vh;
+        box-shadow: none;
     }
 }

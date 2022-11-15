@@ -47,6 +47,7 @@ const BeatDetailPage = (props) => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{display: "none"}}
+            className={styles.wrapper}
         >
             {beat ? <div className={styles['beat-page']}>
 
@@ -61,7 +62,7 @@ const BeatDetailPage = (props) => {
                         >
                             {isPlaying ? 'Pause' : 'Play'}
                         </button>
-                    </div>
+                    </div> 
                     <div className={styles.actions}>
                         <Button onClick={backHandler} className={styles.back}>Back</Button>
                         <Button onClick={viewLeaseHandler} className={styles.add}>{checkPricingState ? 'Return' : 'View Leases'}</Button>
