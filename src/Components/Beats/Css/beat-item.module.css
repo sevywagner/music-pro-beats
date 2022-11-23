@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 50%;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    height: 10vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
 }
 
 .title {
@@ -46,10 +48,9 @@
 
 .actions {
     width: 30vh;
-    height: 10vh;
     border-right: 3px rgb(162, 0, 0) solid;
     padding-left: 4vh;
-    padding-right: 2vh;
+    padding-right: 0vh;
     display: flex;
     align-items: center;
 }
@@ -61,7 +62,7 @@
     border-radius: 35px;
     background-color: black;
     color: white;
-    margin-top: 2.5vh;
+    margin-top: 0vh;
     text-decoration: none;
 }
 
@@ -71,7 +72,7 @@
     border: 1px rgb(162, 0, 0) solid;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     .melodic-key {
         display: none;
     }
@@ -86,7 +87,11 @@
 @media only screen and (max-width: 800px) {
     .title {
         
-        margin-left: 5vh;
+        margin-left: 3vh;
+    }
+
+    .beat {
+        height: 12vh;
     }
 
     .genre {
@@ -97,5 +102,7 @@
         width: 20vh;
         margin-left: 0vh;
         margin-right: 0vh;
+        padding-left: 2vh;
+        border-right: none;
     }
 }

@@ -15,7 +15,9 @@ const Cart = () => {
 
     return (
         <div className={styles['cart-wrapper']}>
-            <Button className={styles.cart} onClick={clickHandler}>Your Cart</Button>
+            <div className={styles['button-wrapper']}>
+                <Button className={styles.cart} onClick={clickHandler}>Your Cart</Button>
+            </div>
             {totalAmount !== 0 && <p className={styles.amount}>{totalAmount}</p>}
             {showDisplay && <CartDisplay onConfirm={clickHandler}/>}
         </div>

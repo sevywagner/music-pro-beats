@@ -12,9 +12,17 @@
     overflow-y: hidden;
 }
 
+.wrapper {
+    width: 100%;
+}
 
+.mobile-header-active {
+    width: 100%;
+    display: none;
+}
 
 .mobile-header {
+    width: 100%;
     display: none;
 }
 
@@ -82,7 +90,8 @@ button {
 
 @media only screen and (max-width: 800px) {
     .mobile-header-active {
-        display: grid;
+        width: 100%;
+        display: inline-block;
         background-color: black;
         height: 65vh;
         grid-template-columns: 1fr 1fr 1fr;
@@ -95,7 +104,6 @@ button {
         "button" "button" "button";
         overflow-x: hidden;
         overflow-y: hidden;
-        width: 100%;
     }
 
     .mobile-header {
@@ -120,6 +128,7 @@ button {
     }
 
     .header {
+        width: 100%;
         flex-direction: column;
         height: 50vh;
     }
@@ -136,24 +145,21 @@ button {
         width: 100%;
     }
 
-    .mobile-header .img {
-        margin-left: 1vh;
-    }
-
-    .mobile-header-active .img {
-        margin-right: 1.5vh;
-    }
-
     .cart {
         grid-area: cart;
         display: flex;
         justify-content: center;
-        margin-right: -8.4vh;
+
     }
 
     .dropdown-button {
         grid-area: button;
         margin-bottom: 3vh;
+        margin-left: 0vh;
+    }
+
+    .mobile-header-active .dropdown-button {
+        margin-right: 3vh;
     }
 
     .mobile-header-active .dropdown-button {

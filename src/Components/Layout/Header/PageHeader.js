@@ -17,7 +17,7 @@ const MobilePageHeader = () => {
             <div className={styles[`${headerClass}`]}>
                 <div className={styles['dropdown-button']}>
                     {!dropdown && <div className={styles.img}></div>}
-                    <button onClick={dropdownHandler}>{dropdown ? '↑' : 'Nav ↓'}</button>
+                    {!dropdown && <button onClick={dropdownHandler}>Nav ↓</button>}
                 </div>
                 {dropdown && <div>
                     <div className={styles.title}>
@@ -32,6 +32,9 @@ const MobilePageHeader = () => {
                     <div className={styles.cart}>
                         <Cart />
                     </div>
+                    <div className={styles['dropdown-button']}>
+                        <button onClick={dropdownHandler}>↑</button>
+                    </div>
                 </div>}
                 
             </div>
@@ -42,6 +45,7 @@ const MobilePageHeader = () => {
 const PageHeader = (props) => {
     return (
         <Fragment>
+            <MobilePageHeader />
             <div className={styles.header}>
                 <div className={styles.title}>
                     <div className={styles.img}></div>
@@ -56,7 +60,6 @@ const PageHeader = (props) => {
                     <Cart />
                 </div>
             </div>
-            <MobilePageHeader />
         </Fragment>
     );
 }
